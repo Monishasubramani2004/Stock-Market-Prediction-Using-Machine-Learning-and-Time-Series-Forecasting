@@ -1,5 +1,5 @@
 
-# 1.Title : Stock-Market-Prediction-Using-Machine-Learning-and-Time-Series-Forecasting
+# 1. Title : Stock-Market-Prediction-Using-Machine-Learning-and-Time-Series-Forecasting
 
 ---
 
