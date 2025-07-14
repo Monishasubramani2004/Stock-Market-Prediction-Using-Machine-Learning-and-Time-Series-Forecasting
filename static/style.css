@@ -1,0 +1,213 @@
+/* Dark mode styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1620288627223-53302f4e8c74?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff; /* Light text for dark mode */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Overlay to darken the background image */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  z-index: -1;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ffffff; /* White text */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #ffffff; /* White text */
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #555; /* Darker border */
+  border-radius: 6px;
+  outline: none;
+  background: #333; /* Dark input background */
+  color: #ffffff; /* White text */
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.error-message {
+  color: #ff6b6b; /* Red error message */
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.news-link {
+  margin-top: 20px;
+}
+
+.news-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-link a:hover {
+  text-decoration: underline;
+}
+
+.chart-container {
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #555; /* Darker border */
+  text-align: center;
+  color: #ffffff; /* White text */
+}
+
+th {
+  background-color: #007bff; /* Blue header */
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1); /* Light rows */
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007bff; /* Blue link */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+.advice {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.advice h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.advice p {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.chart-container {
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.login-link, .register-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-link a, .register-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover, .register-link a:hover {
+  text-decoration: underline;
+}
+/* Disclaimer Styles */
+.disclaimer {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red background */
+  border-left: 4px solid #ff6b6b; /* Red border on the left */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #ff6b6b; /* Red text */
+}
+
+.disclaimer p {
+  margin: 0;
+}
+
+.disclaimer strong {
+  color: #ff6b6b; /* Red text for the word "Disclaimer" */
+}

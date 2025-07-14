@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Disclaimer Message -->
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> This stock price prediction tool is for informational purposes only and should not be relied upon completely for making investment decisions. Always consult with a financial advisor before making any investment.</p>
+        </div>
+
+        <h1>Stock Price Prediction</h1>
+        <form action="/" method="POST">
+            <label for="ticker">Enter Stock Ticker:</label>
+            <input type="text" id="ticker" name="ticker" placeholder="e.g., AAPL, RELIANCE.NS" required>
+
+            <label for="periods">Number of Days to Predict:</label>
+            <input type="number" id="periods" name="periods" placeholder="e.g., 30" min="1" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        <div class="news-link">
+            <a href="https://finance.yahoo.com/news" target="_blank">📰 Latest Stock Market News on Yahoo Finance</a>
+        </div>
+        <div class="login-link">
+            <p>Logged in as <strong>{{ session.username }}</strong> | <a href="/logout">Logout</a></p>
+        </div>
+        {% if error_message %}
+        <div class="error-message">{{ error_message }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
